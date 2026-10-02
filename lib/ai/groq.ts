@@ -4,7 +4,7 @@ import { Message, CustomerState, Customer } from "@/types";
 import { AGENT_TOOLS_DEFINITIONS, executeToolCall } from "@/lib/tools";
 
 const groqApiKey = process.env.GROQ_API_KEY;
-const groqModelName = process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
+const groqModelName = process.env.GROQ_MODEL || "openai/gpt-oss-120b";
 
 let groqClient: Groq | null = null;
 if (groqApiKey && groqApiKey.trim().length > 0) {
